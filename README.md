@@ -1,16 +1,16 @@
 
-1 - Clone this project and the Android symds-simple-demo-android-client
+**1 - Clone this project and the Android symds-simple-demo-android-client**
 
 
 
 
-2 - Open 3 terminals and cd to symmetric-server-3.8.32/bin in each one
+**2 - Open 3 terminals and cd to symmetric-server-3.8.32/bin in each one**
 
 
 
 
 
-3 - In terminal console 3 create database + demo table with 1 row of data
+**3 - In terminal console 3 create database + demo table with 1 row of data**
 
 su - postgres
 
