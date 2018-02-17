@@ -1,3 +1,5 @@
+This project was initially created to aid the reproduction of the issue sited here https://sourceforge.net/p/symmetricds/discussion/739236/thread/230f4a17/
+
 
 **1 - Clone this project and the Android symds-simple-demo-android-client**
 
@@ -27,7 +29,7 @@ psql -U postgres -d simpledemodb -c "INSERT INTO demo (id, text, active, update_
 
 
 
-4 - In terminal console 1 delete staging directory as may be populated from previous run + start Sym DS
+**4 - In terminal console 1 delete staging directory as may be populated from previous run + start Sym DS**
 
 cd /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/bin
 
@@ -69,7 +71,7 @@ HttpAdaptor version 3.0.1 started on port 31416
 
 
 
-5 - In terminal console 3 insert Sym DS data 
+**5 - In terminal console 3 insert Sym DS data**
 
 psql -U postgres -d simpledemodb -c "insert into SYM_NODE_GROUP (node_group_id, description) values ('simple-demo-tablet-node-group', 'simple demo tablet client node group')"
 
@@ -147,7 +149,7 @@ psql -U postgres -d simpledemodb -c "INSERT INTO sym_conflict (conflict_id, sour
 
 
 
-6 - In terminal console 2 open registration for the node group "simple-demo-tablet-node-group" with an external identifier of "simple-demo-server-node"
+**6 - In terminal console 2 open registration for the node group "simple-demo-tablet-node-group" with an external identifier of "simple-demo-server-node"**
 
 ./symadmin --engine simple-demo open-registration simple-demo-tablet-node-group simple-demo-client-node
 
@@ -169,22 +171,24 @@ Opened registration for node group of 'simple-demo-tablet-node-group' external I
 
 
 
-7 - In terminal console 1 stop Sym DS and then restart (not sure why necessary)
+**7 - In terminal console 1 stop Sym DS and then restart (not sure why necessary)**
 
 ./sym
 
 
 
 
-8 - Start Android app
+**8 - Start Android app**
 
 
-9 - In terminal console 2 run initial load
+**9 - In terminal console 2 run initial load**
 
 ./symadmin --engine simple-demo reload-node simple-demo-client-node
 
 
+**10 - Issue with data being pinged back**
 
+View the sym_outgoing_batch table using the Android Database manager. There will be an entry as shown in the screen shot which should not be there.
 
 
 -----------------------
