@@ -1,8 +1,12 @@
 
-1) 
+1) Clone this project and the Android symds-simple-demo-android-client
+
+
 
 
 2) Open 3 terminals and cd to symmetric-server-3.8.32/bin in each one
+
+
 
 
 
@@ -17,6 +21,9 @@ psql -U postgres -d simpledemodb -c "CREATE ROLE simpledemo LOGIN PASSWORD 'simp
 psql -U postgres -d simpledemodb -c "CREATE TABLE demo (id text primary key, text text, active boolean, update_date_time timestamp without time zone NOT NULL, version integer NOT NULL)"
 
 psql -U postgres -d simpledemodb -c "INSERT INTO demo (id, text, active, update_date_time, version) VALUES ('1', 'initial text from server', true, CURRENT_TIMESTAMP, 0)"
+
+
+
 
 
 
