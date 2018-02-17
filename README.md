@@ -13,7 +13,6 @@ This project was initially created to aid the reproduction of the issue sited he
 
 
 
-
 **3 - In terminal console 3 create database + demo table with 1 row of data**
 
 su - postgres
@@ -33,12 +32,9 @@ psql -U postgres -d simpledemodb -c "INSERT INTO demo (id, text, active, update_
 
 **4 - In terminal console 1 delete staging directory as may be populated from previous run + start Sym DS**
 
-cd /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/bin
+delete staging directory e.g.
 
--- delete staging directory
-rm -rf /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/tmp/simple-demo
-
-rm -rf  /tmp/simple-demo
+rm -rf ../tmp/simple-demo
 
 . ./setenv
 
@@ -157,14 +153,14 @@ psql -U postgres -d simpledemodb -c "INSERT INTO sym_conflict (conflict_id, sour
 
 -- should se something like ...
 
-Log output will be written to /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/logs/symmetric.log
+
 [] - AbstractCommandLauncher - Option: name=engine, value={simple-demo}
 [simple-demo] - AbstractSymmetricEngine - Initializing connection to database
 [simple-demo] - JdbcDatabasePlatformFactory - Detected database 'PostgreSQL', version '9', protocol 'postgresql'
 [simple-demo] - JdbcDatabasePlatformFactory - The IDatabasePlatform being used is org.jumpmind.db.platform.postgresql.PostgreSqlDatabasePlatform
 [simple-demo] - PostgreSqlSymmetricDialect - The DbDialect being used is org.jumpmind.symmetric.db.postgresql.PostgreSqlSymmetricDialect
 [simple-demo] - ExtensionService - Found 0 extension points from the database that will be registered
-[simple-demo] - StagingManager - The staging directory was initialized at the following location: /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/tmp/simple-demo
+[simple-demo] - StagingManager - The staging directory was initialized at the following location: symds-simple-demo/symmetric-server-3.8.32/tmp/simple-demo
 [simple-demo] - ClusterService - This node picked a server id of arch-dadda
 [simple-demo] - ExtensionService - Found 0 extension points from the database that will be registered
 [simple-demo] - ClientExtensionService - Found 7 extension points from spring that will be registered
@@ -190,7 +186,7 @@ Opened registration for node group of 'simple-demo-tablet-node-group' external I
 
 **10 - Issue with data being pinged back**
 
-View the sym_outgoing_batch table using the Android Database manager. There will be an entry as shown in the screen shot which should not be there.
+View the sym_outgoing_batch table using the Android Database manager. There will be an entry as shown in the screen shot which should not be there. Also there will be a corresponding entry in the sym_incoming_batch table on the server
 
 
 -----------------------
