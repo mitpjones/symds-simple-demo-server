@@ -49,7 +49,7 @@ rm -rf ../tmp/simple-demo
 [simple-demo] - JdbcDatabasePlatformFactory - The IDatabasePlatform being used is org.jumpmind.db.platform.postgresql.PostgreSqlDatabasePlatform
 [simple-demo] - PostgreSqlSymmetricDialect - The DbDialect being used is org.jumpmind.symmetric.db.postgresql.PostgreSqlSymmetricDialect
 [simple-demo] - ExtensionService - Found 0 extension points from the database that will be registered
-[simple-demo] - StagingManager - The staging directory was initialized at the following location: /home/tim/resources/mash/symmetricDS/symds-simple-demo/symmetric-server-3.8.32/tmp/simple-demo
+[simple-demo] - StagingManager - The staging directory was initialized at the following location: symds-simple-demo/symmetric-server-3.8.32/tmp/simple-demo
 [simple-demo] - ClusterService - This node picked a server id of arch-dadda
 [startup] - / - Initializing Spring FrameworkServlet 'rest'
 [simple-demo] - ExtensionService - Found 0 extension points from the database that will be registered
