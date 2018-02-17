@@ -1,5 +1,7 @@
 This project was initially created to aid the reproduction of the issue sited here https://sourceforge.net/p/symmetricds/discussion/739236/thread/230f4a17/
 
+**Steps to setup and run:**
+
 
 **1 - Clone this project and the Android symds-simple-demo-android-client**
 
