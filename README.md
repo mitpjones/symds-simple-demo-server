@@ -176,7 +176,7 @@ Opened registration for node group of 'simple-demo-tablet-node-group' external I
 
 
 
-**8 - Start Android app**
+**8 - Install and start the symds-simple-demo-android-client Android app**
 
 
 **9 - In terminal console 2 run initial load**
